@@ -1,8 +1,10 @@
 import React from 'react'
 
-function Marquee() {
+function Marquee({imagesurls}) {
   return (
-    <div>Marquee</div>
+    <div className='flex w-full py-5 gap-20 bg-zinc-900 whitespace-nowrap overflow-hidden'>
+      {imagesurls.map(url => <img src={url} className='h-6 mb-15'/>)}
+    </div>
   )
 }
 
