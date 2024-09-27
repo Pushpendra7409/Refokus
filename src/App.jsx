@@ -1,4 +1,5 @@
 import React from 'react'
+import LocomotiveScroll from 'locomotive-scroll';
 import Navbar from './components/Navbar'
 import Work from './components/Work'
 import Stripes from './components/Stripes'
@@ -9,6 +10,7 @@ import Footer from './components/Footer'
 
 
 function App() {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <div className=" w-full h-screen bg-zinc-900 text-3xl text-white font-satoshi">
     <Navbar />
