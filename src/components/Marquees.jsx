@@ -22,7 +22,7 @@ function Marquees() {
       "https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/666359b5306b05c2b7042241_65b2ca2282d921d99755eaf6_Logo%2520White%25201.svg",]
   ]
   return (
-    <div className='bg-zinc-900'>
+    <div className='py-20 bg-zinc-900'>
       {images.map(item => <Marquee imagesurls={item}/>)}
     </div>
   )
