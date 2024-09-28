@@ -24,14 +24,14 @@ function Products() {
           <motion.div 
           initial={{ y: position, x: "-50%" }} 
           animate={{ y: position + `rem` }}
-          className='window absolute w-[32rem] h-[23rem] bg-white left-[44%] overflow-hidden'>
+          transition={{ease: [0.16, 1, 0.3, 1], duration: .5}}
+          className='window absolute w-[32rem] h-[23rem] left-[44%] overflow-hidden'>
 
-          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-100'></motion.div>
-          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-200'></motion.div>
-          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-300'></motion.div>
-          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-400'></motion.div> 
-          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-500'></motion.div>
-
+          <motion.div animate={{y: -position+`rem`}} transition={{ease: [0.16, 1, 0.3, 1], duration: .5}} className='w-full h-full'><img src="/Img1.png"></img></motion.div>
+          <motion.div animate={{y: -position+`rem`}} transition={{ease: [0.16, 1, 0.3, 1], duration: .5}} className='w-full h-full'><img src="/Img2.png"></img></motion.div>
+          <motion.div animate={{y: -position+`rem`}} transition={{ease: [0.16, 1, 0.3, 1], duration: .5}} className='w-full h-full'><img src="/Img3.png"></img></motion.div>
+          <motion.div animate={{y: -position+`rem`}} transition={{ease: [0.16, 1, 0.3, 1], duration: .5}} className='w-full h-full'><img src="/Img4.png"></img></motion.div> 
+          <motion.div animate={{y: -position+`rem`}} transition={{ease: [0.16, 1, 0.3, 1], duration: .5}} className='w-full h-full'><img src="/Img5.png"></img></motion.div>
           </motion.div>
         </div>
     </div>
