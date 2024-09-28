@@ -14,7 +14,15 @@ function Products() {
   return (
     <div className='mt-28 relative'>
         {products.map((val, index) => <Product key={index} val={val}/>)}
-        <div className='absolute top-0 w-full h-full bg-sky-400'></div>
+        <div className='absolute top-0 w-full h-full pointer-events-none'> 
+          <div className='window absolute w-[32rem] h-[23rem] bg-white left-[44%] -translate-x-[50%]'>
+          <div className='w-full h-full bg-sky-100'></div>
+          <div className='w-full h-full bg-sky-200'></div>
+          <div className='w-full h-full bg-sky-300'></div>
+          <div className='w-full h-full bg-sky-400'></div>
+          <div className='w-full h-full bg-sky-500'></div>
+          </div>
+        </div>
     </div>
   )
 }
