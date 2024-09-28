@@ -9,8 +9,8 @@ function Navbar() {
       <h1 className='text-xl flex items-center gap-2'><PiArrowLineUpBold/>Refokus</h1>
       <div className='Links flex gap-14 ml-20'>
         {["Home", "Work", "Culture", "", "News"].map((elem, index)=> 
-        elem.length === 0? <span className='w-[2px] h-7 bg-zinc-700'></span> : (
-        <a className='text-xl flex items-center gap-1' href='#'>
+        elem.length === 0? <span key={index} className='w-[2px] h-7 bg-zinc-700'></span> : (
+        <a key={index} className='text-xl flex items-center gap-1' href='#'>
         {index === 1 ? <span style={{boxShadow: "0 0 0.25em #00FF19"}} className='inline-block w-1.5 h-1.5 rounded-full bg-green-500 '></span> : null}
           {elem} </a>))}
       </div>

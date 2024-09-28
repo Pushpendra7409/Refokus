@@ -20,7 +20,7 @@ function Stripes() {
   return (
       <div className='flex items-center'>
         {data.map((elem, index) => (
-          <Stripe val={elem} />
+          <Stripe key={index} val={elem} />
         ))}
     </div>
   );

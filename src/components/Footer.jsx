@@ -2,19 +2,19 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full bg-zinc-900 min-h-64'>
-      <div className='max-w-screen-xl py-10 flex gap-32 ml-28'>
+    <div className='w-full bg-zinc-900'>
+      <div className='max-w-screen-xl mx-auto py-10 flex gap-32 ml-28'>
         <div className='basis-1/2 text-[10rem] font-medium leading-none mr-28'>refokus.</div>
 
         <div className='basis-1/2 flex gap-4'>
          <div className='basis-1/3'>
          <h4 className='mb-10 capitalize'>Socials</h4>
-            {["Instagram", "Facebook", "X", "Linkedin"].map((item, index) => <a className='block mt-2 capitalize text-zinc-500 text-2xl'>{item}</a>)}
+            {["Instagram", "Facebook", "X", "Linkedin"].map((item, index) => <a key={index} className='block mt-2 capitalize text-zinc-500 text-2xl'>{item}</a>)}
          </div>
 
          <div className='basis-1/3'>
          <h4 className='mb-10 capitalize'>Socials</h4>
-            {["Instagram", "Facebook", "X", "Linkedin"].map((item, index) => <a className='block mt-2 capitalize text-zinc-500 text-2xl'>{item}</a>)}
+            {["Instagram", "Facebook", "X", "Linkedin"].map((item, index) => <a key={index} className='block mt-2 capitalize text-zinc-500 text-2xl'>{item}</a>)}
          </div>
 
          <div className='basis-1/3 flex flex-col items-end'>
