@@ -1,6 +1,7 @@
 import React from 'react'
 import Product from './Product'
 
+
 function Products() {
     var products = [
         {title: "cula", description: "We've had a ton of fun creating a new website for Cula! This time, we immersed ourselves in a 3D world we created to explain how Cula's platform collects data from carbon removal processes and converts them into carbon credit certificates.", live: true, case: false},
@@ -11,8 +12,9 @@ function Products() {
 
     ]
   return (
-    <div className='mt-28'>
+    <div className='mt-28 relative'>
         {products.map((val, index) => <Product key={index} val={val}/>)}
+        <div className='absolute top-0 w-full h-full bg-sky-400'></div>
     </div>
   )
 }
