@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Product from './Product'
-
+import { motion } from 'framer-motion'
 
 function Products() {
     var products = [
@@ -11,17 +11,28 @@ function Products() {
         {title: "layout land", description: "We collaborated with the Webflow University team to develop an educational experience aimed at helping designers and newcomers grasp the core fundamentals of the product. This partnership allowed us to leverage our expertise as a leading Webflow agency,", live: true, case: false},
 
     ]
+
+    const [position, setPosition] = useState(0);
+    const mover = (val) => {
+        setPosition(val * 23)
+    }
+
   return (
     <div className='mt-28 relative'>
-        {products.map((val, index) => <Product key={index} val={val}/>)}
+        {products.map((val, index) => <Product val={val} mover={mover} count={index} />)}
         <div className='absolute top-0 w-full h-full pointer-events-none'> 
-          <div className='window absolute w-[32rem] h-[23rem] bg-white left-[44%] -translate-x-[50%]'>
+          <motion.div 
+          initial={{ y: position, x: "-50%" }} 
+          animate={{ y: position + `rem` }}
+          className='window absolute w-[32rem] h-[23rem] bg-white left-[44%] overflow-hidden'>
+
           <div className='w-full h-full bg-sky-100'></div>
           <div className='w-full h-full bg-sky-200'></div>
           <div className='w-full h-full bg-sky-300'></div>
           <div className='w-full h-full bg-sky-400'></div>
           <div className='w-full h-full bg-sky-500'></div>
-          </div>
+
+          </motion.div>
         </div>
     </div>
   )
