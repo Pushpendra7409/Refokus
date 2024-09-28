@@ -19,18 +19,18 @@ function Products() {
 
   return (
     <div className='mt-28 relative'>
-        {products.map((val, index) => <Product val={val} mover={mover} count={index} />)}
+        {products.map((val, index) => <Product key={index} val={val} mover={mover} count={index} />)}
         <div className='absolute top-0 w-full h-full pointer-events-none'> 
           <motion.div 
           initial={{ y: position, x: "-50%" }} 
           animate={{ y: position + `rem` }}
           className='window absolute w-[32rem] h-[23rem] bg-white left-[44%] overflow-hidden'>
 
-          <div className='w-full h-full bg-sky-100'></div>
-          <div className='w-full h-full bg-sky-200'></div>
-          <div className='w-full h-full bg-sky-300'></div>
-          <div className='w-full h-full bg-sky-400'></div>
-          <div className='w-full h-full bg-sky-500'></div>
+          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-100'></motion.div>
+          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-200'></motion.div>
+          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-300'></motion.div>
+          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-400'></motion.div> 
+          <motion.div animate={{y: -position+`rem`}}  className='w-full h-full bg-sky-500'></motion.div>
 
           </motion.div>
         </div>
